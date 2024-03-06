@@ -1,0 +1,13 @@
+#include <stdio.h>
+#include<math.h>
+main()
+{
+   float x1,x2,y1,y2;
+   float slope,dis;
+   printf("enter the values of two points");
+  scanf("%f%f%f%f",&x1,&x2,&y1,&y2);
+  slpoe=(y2=y1)/(x2-x1);
+  dis=sqrt(pow((x2-x1),2)+(pow((y2-y1),2);
+  printf("slope=%f",slope);
+printf("dis=%f",dis);
+}
