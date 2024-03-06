@@ -1,11 +1,11 @@
-3include<stdio.h>
+#include<stdio.h>
 main()
 {  
  float p;
 int age;
 printf("enter the age of a person");
 scanf("%d%f",&age,&p);
-if(age>=60)
+if(age>=55)
 {
   p=p-(0.2*fair);
 }
