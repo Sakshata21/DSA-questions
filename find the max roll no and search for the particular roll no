@@ -1,0 +1,70 @@
+#include<stdio.h>
+void read(float[],int);
+void display(float[],int);
+float max(float[],int);
+int count_max(float[],int,float);
+main()
+{
+    int n,count;
+    float m[100],res,key;
+    printf("Enter the value of n\n");
+    scanf("%d",&n);
+    read(m,n);
+    display(m,n);
+    res=max(m,n);
+    printf("\n roll no of MAX NUMBER=%f",res);
+    printf("Enter the value of key\n");
+    scanf("%f",&res);
+    count=count_max(m,n,res);
+   
+    if(count>0)
+    {
+        printf("key found\n");
+         printf("count of max numbers=%d",count);
+    }
+    else
+    {
+        printf("key not found\n");
+    }
+}
+void read(float m[100],int n)
+{
+    int i;
+    for(i=0;i<n;i++)
+    {
+        scanf("%f",&m[i]);
+    }
+}
+void display(float m[100],int n)
+{
+    int i;
+    for(i=0;i<n;i++)
+    {
+        printf("%f\n",m[i]);
+    }
+}
+float max(float m[100],int n)
+{
+    int i,j=1;
+    float res=m[0];
+    for(i=1;i<n;i++)
+    {
+        if(m[i]>res)
+        {
+        res=m[i];
+        j=i+1;
+        }
+    }
+    return j;
+}
+int count_max(float m[100],int n,float res )
+{
+    int i,count=0;
+
+    for(i=0;i<n;i++)
+    {
+        if(res==m[i])
+            count++;
+    }
+        return count;
+}
