@@ -1,0 +1,11 @@
+#include<stdio.h>
+main()
+{
+float bs,da,hra,gs;
+printf("Enter the value of bs:");
+scanf("%f",&bs);
+da=0.40*bs;
+hra=0.20*bs;
+gs=hra+da+bs;
+printf("gross salary=%f",gs);
+}
